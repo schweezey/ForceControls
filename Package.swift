@@ -19,6 +19,6 @@ let package = Package(
             path: "Sources/LoadingButton"),
         .testTarget(
             name: "ForceControlsTests",
-            dependencies: ["ForceControls"]),
+            dependencies: ["LoadingButton"]),
     ]
 )

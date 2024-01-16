@@ -6,14 +6,14 @@ import PackageDescription
 let package = Package(
     name: "ForceControls",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v15),
         .macOS(.v11),
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "LoadingButton",
-            targets: ["LoadingButton"]),
+            name: "ForceControls",
+            targets: ["LoadingButton", "LabelTextField"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -21,6 +21,9 @@ let package = Package(
         .target(
             name: "LoadingButton",
             path: "Sources/LoadingButton"),
+        .target(
+            name: "LabelTextField",
+            path: "Sources/LabelTextField"),
         .testTarget(
             name: "ForceControlsTests",
             dependencies: ["LoadingButton"]),
